@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Phone, Mail, MapPin, CheckCircle } from 'lucide-react';
 import axios from 'axios';
+const WEBHOOK_URL = "https://automation.greengoldgrocers.in/webhook/enquiry";
+
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
@@ -54,7 +56,7 @@ const Enquiry = () => {
 
     setIsSubmitting(true);
     try {
-      await axios.post(`${API}/enquiry`, formData);
+      await axios.post(WEBHOOK_URL, formData);
       setSubmitSuccess(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
       setTimeout(() => setSubmitSuccess(false), 5000);
