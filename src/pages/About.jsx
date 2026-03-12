@@ -47,7 +47,7 @@ const About = () => {
   <video
   controls
   loop
-  poster="/farm-image.jpg"
+  poster="/farm-image.png"
   className="w-full h-full object-cover rounded-3xl"
 >
   <source src="/farm-video.mp4" type="video/mp4" />
