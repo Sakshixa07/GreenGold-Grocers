@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Phone, Mail, MapPin, CheckCircle } from 'lucide-react';
 import axios from 'axios';
+const WEBHOOK_URL = "https://automation.greengoldgrocers.in/webhook/enquiry";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+
+
 
 const Enquiry = () => {
   const [formData, setFormData] = useState({
@@ -48,23 +49,27 @@ const Enquiry = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!validateForm()) return;
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    setIsSubmitting(true);
-    try {
-      await axios.post(`${API}/enquiry`, formData);
-      setSubmitSuccess(true);
-      setFormData({ name: '', email: '', phone: '', message: '' });
-      setTimeout(() => setSubmitSuccess(false), 5000);
-    } catch (error) {
-      console.error('Error submitting enquiry:', error);
-      alert('Failed to submit enquiry. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  if (!validateForm()) return;
+
+  setIsSubmitting(true);
+
+  try {
+    await axios.post(WEBHOOK_URL, formData);
+
+    setSubmitSuccess(true);
+    setFormData({ name: '', email: '', phone: '', message: '' });
+
+    setTimeout(() => setSubmitSuccess(false), 5000);
+  } catch (error) {
+    console.error('Error submitting enquiry:', error);
+    alert('Failed to submit enquiry.');
+  } finally {
+    setIsSubmitting(false);
+  }
+};;
 
   return (
     <div>
