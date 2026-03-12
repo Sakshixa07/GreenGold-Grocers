@@ -1,4 +1,4 @@
-import farmVideo from '../images/farm-video.mp4';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Sprout, Target, Users, Sparkles } from 'lucide-react';
@@ -43,13 +43,14 @@ const About = () => {
               transition={{ duration: 0.6 }}
               whileHover={{ scale: 1.02 }}
             >
-            <div className="w-full max-w-[350px] h-[500px] mx-auto rounded-3xl overflow-hidden shadow-lg">
- <video
-  src={farmVideo}
-  controls
-  loop
-  className="w-full h-full object-cover rounded-3xl"
-/>
+  <div className="w-full max-w-[350px] h-[500px] mx-auto rounded-3xl overflow-hidden shadow-lg">
+  <video
+    controls
+    loop
+    className="w-full h-full object-cover rounded-3xl"
+  >
+    <source src="/farm-video.mp4" type="video/mp4" />
+  </video>
 </div>
             </motion.div>
 
