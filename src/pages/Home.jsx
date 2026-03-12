@@ -28,11 +28,11 @@ const Home = () => {
 
       {/* duplicate for seamless loop */}
 
-      <span className="flex items-center gap-2">🌾 Stone Ground Atta</span>
-      <span className="flex items-center gap-2">🚜 MP Wheat Sourcing</span>
-      <span className="flex items-center gap-2">🏭 Hygienic Plant</span>
-      <span className="flex items-center gap-2">💧 RO Washed Grains</span>
-      <span className="flex items-center gap-2">⚙ Automatic Packing</span>
+      <span className="flex items-center gap-2"> Stone Ground Atta</span>
+      <span className="flex items-center gap-2"> MP Wheat Sourcing</span>
+      <span className="flex items-center gap-2"> Hygienic Plant</span>
+      <span className="flex items-center gap-2"> RO Washed Grains</span>
+      <span className="flex items-center gap-2"> Automatic Packing</span>
 
     </div>
 
