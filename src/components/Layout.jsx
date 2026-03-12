@@ -3,6 +3,7 @@ import logo from '../images/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import { Leaf, Phone, Mail, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import fssaiLogo from "../images/fssai.png";
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -159,7 +160,7 @@ const Layout = ({ children }) => {
       {/* Footer */}
       <footer className="bg-[#14532D] text-white mt-auto">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl py-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {/* Brand Section */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -176,7 +177,7 @@ const Layout = ({ children }) => {
 />
               </div>
               <p className="text-white/80 leading-relaxed">
-                Premium organic foods crafted for purity, nutrition, and wholesome living.
+                Premium foods crafted for purity, nutrition, and wholesome living.
               </p>
             </motion.div>
 
@@ -219,6 +220,7 @@ const Layout = ({ children }) => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
+              
               <h3 className="text-lg font-heading font-semibold mb-4 text-white">Contact Us
 
               </h3>
@@ -237,6 +239,30 @@ const Layout = ({ children }) => {
                 </li>
               </ul>
             </motion.div>
+            {/* Certification */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5, delay: 0.3 }}
+>
+  <h3 className="text-lg font-heading font-semibold mb-4 text-white">
+    Certification
+  </h3>
+
+  <div className="flex items-center gap-3">
+    <img
+      src={fssaiLogo}
+      alt="FSSAI Certification"
+      className="w-14 h-auto"
+    />
+
+    <div className="text-sm text-white/80">
+      <p className="font-medium text-white">FSSAI Licensed</p>
+      <p>License No: 12724999000784</p>
+    </div>
+  </div>
+</motion.div>
           </div>
 
           <motion.div 
@@ -248,7 +274,10 @@ const Layout = ({ children }) => {
           >
             <p>© 2025 GreenGold Grocers. All rights reserved. | Pure Nature, Delivered to Your Door.</p>
           </motion.div>
+          
+          
         </div>
+        
       </footer>
     </div>
   );

@@ -4,14 +4,40 @@ import { motion } from 'framer-motion';
 import { Leaf, Award, Heart, Truck } from 'lucide-react';
 import homeBanner from '../images/home.png';
 
+
 const Home = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0 },
   };
+  
 
   return (
     <div>
+      {/* Premium USP Strip */}
+<section className="bg-gradient-to-r from-[#14532D] to-[#0f3e21] text-white overflow-hidden border-y border-white/10">
+  <div className="relative flex overflow-hidden">
+    
+    <div className="flex gap-16 py-3 text-sm md:text-base font-medium animate-usp-scroll hover:[animation-play-state:paused]">
+
+      <span className="flex items-center gap-2">🌾 Stone Ground Atta</span>
+      <span className="flex items-center gap-2">🚜 MP Wheat Sourcing</span>
+      <span className="flex items-center gap-2">🏭 Hygienic Plant</span>
+      <span className="flex items-center gap-2">💧 RO Washed Grains</span>
+      <span className="flex items-center gap-2">⚙ Automatic Packing</span>
+
+      {/* duplicate for seamless loop */}
+
+      <span className="flex items-center gap-2">🌾 Stone Ground Atta</span>
+      <span className="flex items-center gap-2">🚜 MP Wheat Sourcing</span>
+      <span className="flex items-center gap-2">🏭 Hygienic Plant</span>
+      <span className="flex items-center gap-2">💧 RO Washed Grains</span>
+      <span className="flex items-center gap-2">⚙ Automatic Packing</span>
+
+    </div>
+
+  </div>
+</section>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#FDFBF7] to-[#F5EFE6]/30">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl py-20 md:py-32">
@@ -31,7 +57,7 @@ const Home = () => {
                 className="inline-block"
               >
                 <span className="text-sm font-medium tracking-wider uppercase text-[#14532D]/80 bg-[#F5EFE6] px-4 py-2 rounded-full" data-testid="hero-badge">
-                   Discover Premium Organic Groceries
+                   Discover Premium Groceries
                 </span>
               </motion.div>
               <h1 className="font-heading text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-[#052e16]" data-testid="hero-headline">
@@ -39,7 +65,7 @@ const Home = () => {
                 Premium Atta Blends for Every Kitchen
               </h1>
               <p className="text-lg md:text-xl leading-relaxed text-[#6B5D52] max-w-xl" data-testid="hero-subtext">
-               Discover premium organic essentials, thoughtfully sourced for purity, nutrition, and everyday wellness.
+               Discover premium essentials, thoughtfully sourced for purity, nutrition, and everyday wellness.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -78,7 +104,7 @@ const Home = () => {
             <img
             src={homeBanner}
             alt="Greengold Products"
-            className="w-full h-[500px] object-cover transition-transform duration-700"
+            className="w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] object-cover transition-transform duration-700"
             data-testid="hero-image"
             />
             </motion.div>
@@ -109,7 +135,7 @@ const Home = () => {
               Why Choose GreenGold?
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-[#6B5D52] max-w-2xl mx-auto">
-              We're committed to bringing you the finest organic products with uncompromising quality.
+              We're committed to bringing you the finest products with uncompromising quality.
             </p>
           </motion.div>
 
@@ -133,10 +159,10 @@ const Home = () => {
                 <Leaf className="w-8 h-8 text-[#14532D]" />
               </motion.div>
               <h3 className="font-heading text-2xl md:text-3xl font-medium text-[#052e16] mb-4">
-                Organic Ingredients
+              Ingredients
               </h3>
               <p className="text-base leading-relaxed text-[#6B5D52]">
-                Certified 100% organic products sourced directly from sustainable farms across India.
+                Certified 100% hygiene products sourced directly from sustainable farms across India.
               </p>
             </motion.div>
 
@@ -208,26 +234,18 @@ const Home = () => {
             className="text-center space-y-8"
           >
             <h2 className="font-heading text-4xl md:text-5xl font-semibold tracking-tight text-white" data-testid="cta-heading">
-              Ready to Experience Pure Organic Goodness?
+              Ready to Experience Pure Goodness?
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-white/90 max-w-2xl mx-auto">
               Join thousands of families who trust GreenGold Grocers for their daily nutrition needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link
-                  to="/products"
-                  data-testid="cta-shop-now"
-                  className="bg-white text-[#14532D] px-8 py-6 rounded-full text-lg font-medium tracking-wide transition-all shadow-lg hover:shadow-xl inline-block"
-                >
-                  Shop Now
-                </Link>
-              </motion.div>
+             
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   to="/enquiry"
                   data-testid="cta-contact"
-                  className="border-2 border-white text-white px-8 py-6 rounded-full text-lg font-medium tracking-wide transition-all hover:bg-white/10 hover:shadow-lg bg-transparent inline-block"
+                  className="border-2 border-white text-white px-6 py-3 rounded-full text-sm font-medium transition-all hover:bg-white/10"
                 >
                   Contact Us
                 </Link>
@@ -236,6 +254,7 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+      
     </div>
   );
 };

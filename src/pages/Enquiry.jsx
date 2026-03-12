@@ -106,7 +106,7 @@ const Enquiry = () => {
                   Contact Information
                 </h2>
                 <p className="text-base leading-relaxed text-[#6B5D52]">
-                  Reach out to us through any of these channels. Our team is ready to assist you with your organic grocery needs.
+                  Reach out to us through any of these channels. Our team is ready to assist you with your grocery needs.
                 </p>
               </div>
 

@@ -1,3 +1,6 @@
+import multiGrainAttaImg from '../images/Atta-Multi-Grain.png';
+import bajraAttaImg from '../images/Bajra.png';
+import chakkiAttaImg from '../images/Chakki-atta.png';
 import jowarImg from '../images/Jowar.png';
 import kuttuImg from '../images/Kuttu.png';
 import maidaImg from '../images/Maida.png';
@@ -17,94 +20,144 @@ import { Search } from 'lucide-react';
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'Atta & Whole Grains', 'Healthy Cereals', 'Superfoods', 'Natural Grocery'];
+  const categories = ['All', 'Atta & Whole Grains', 'Healthy Cereals', 'Superfoods'];
 
 const products = [
-  {
-    id: 1,
-    name: 'Missa Atta',
-    category: 'Atta & Whole Grains',
-    description: 'Nutritious traditional flour blend',
-    image: missaAttaImg,
-  },
-  {
-    id: 2,
-    name: 'Maida',
-    category: 'Atta & Whole Grains',
-    description: 'Fine refined wheat flour',
-    image: maidaImg,
-  },
-  {
-    id: 3,
-    name: 'Makka Atta',
-    category: 'Atta & Whole Grains',
-    description: 'Stone-ground maize flour',
-    image: makkaImg,
-  },
-  {
-    id: 4,
-    name: 'Jowar Atta',
-    category: 'Atta & Whole Grains',
-    description: 'Healthy gluten-free sorghum flour',
-    image: jowarImg,
-  },
-  {
-    id: 5,
-    name: 'Kuttu Atta',
-    category: 'Atta & Whole Grains',
-    description: 'Premium buckwheat flour',
-    image: kuttuImg,
-  },
-  {
-    id: 6,
-    name: 'Poha',
-    category: 'Healthy Cereals',
-    description: 'Light and healthy flattened rice',
-    image: pohaImg,
-  },
-  {
-    id: 7,
-    name: 'Murmura',
-    category: 'Healthy Cereals',
-    description: 'Crispy puffed rice',
-    image: murmuraImg,
-  },
-  {
-    id: 8,
-    name: 'Roasted Daliya',
-    category: 'Healthy Cereals',
-    description: 'High-fiber roasted broken wheat',
-    image: roastedDaliyaImg,
-  },
-  {
-    id: 9,
-    name: 'Suzi',
-    category: 'Healthy Cereals',
-    description: 'Premium semolina',
-    image: suziImg,
-  },
-  {
-    id: 10,
-    name: 'Ragi',
-    category: 'Superfoods',
-    description: 'Calcium-rich finger millet',
-    image: ragiImg,
-  },
-  {
-    id: 11,
-    name: 'Multi Millets',
-    category: 'Superfoods',
-    description: 'Power-packed millet blend',
-    image: multiMilletsImg,
-  },
-  {
-    id: 12,
-    name: 'Sattu',
-    category: 'Superfoods',
-    description: 'Protein-rich roasted gram flour',
-    image: sattuImg,
-  },
-];
+{
+id:1,
+name:'Multi Grain Atta',
+category:'Healthy Cereals',
+description:'Nutritious multi grain flour',
+size:'1 kg',
+image:multiGrainAttaImg
+},
+
+{
+id:2,
+name:'Bajra Atta',
+category:'Superfoods',
+description:'Pearl millet flour rich in fiber',
+size:'800 gm',
+image:bajraAttaImg
+},
+
+{
+id:3,
+name:'Chakki Fresh Atta',
+category:'Atta & Whole Grains',
+description:'Stone ground MP wheat flour',
+size:'5 kg | 10 kg | 50 kg',
+image:chakkiAttaImg
+},
+
+{
+id:4,
+name:'Jowar Atta',
+category:'Superfoods',
+description:'Healthy gluten-free sorghum flour',
+size:'800 gm',
+image:jowarImg
+},
+
+{
+id:5,
+name:'Kuttu Atta',
+category:'Superfoods',
+description:'Premium buckwheat flour',
+size:'400 gm',
+image:kuttuImg
+},
+
+{
+id:6,
+name:'Maida',
+category:'Atta & Whole Grains',
+description:'Fine refined wheat flour',
+size:'500 gm | 1 kg',
+image:maidaImg
+},
+
+{
+id:7,
+name:'Makka Atta',
+category:'Superfoods',
+description:'Stone-ground maize flour',
+size:'800 gm',
+image:makkaImg
+},
+
+{
+id:8,
+name:'Missa Atta',
+category:'Healthy Cereals',
+description:'Nutritious traditional flour blend',
+size:'1 kg',
+image:missaAttaImg
+},
+
+{
+id:9,
+name:'Multi Millets Atta',
+category:'Superfoods',
+description:'Power packed millet blend',
+size:'400 gm',
+image:multiMilletsImg
+},
+
+{
+id:10,
+name:'Murmura',
+category:'Healthy Cereals',
+description:'Crispy puffed rice',
+size:'400 gm',
+image:murmuraImg
+},
+
+{
+id:11,
+name:'Poha',
+category:'Healthy Cereals',
+description:'Light flattened rice',
+size:'500 gm | 1 kg',
+image:pohaImg
+},
+
+{
+id:12,
+name:'Ragi Atta',
+category:'Superfoods',
+description:'Calcium rich finger millet',
+size:'800 gm',
+image:ragiImg
+},
+
+{
+id:13,
+name:'Roasted Daliya',
+category:'Healthy Cereals',
+description:'Roasted broken wheat',
+size:'400 gm',
+image:roastedDaliyaImg
+},
+
+{
+id:14,
+name:'Sattu',
+category:'Superfoods',
+description:'Protein rich roasted gram flour',
+size:'400 gm',
+image:sattuImg
+},
+
+{
+id:15,
+name:'Sooji',
+category:'Atta & Whole Grains',
+description:'Premium semolina',
+size:'500 gm | 1 kg',
+image:suziImg
+}
+]
 
   const filteredProducts = selectedCategory === 'All' 
     ? products 
@@ -131,7 +184,7 @@ const products = [
               Our Products
             </h1>
             <p className="text-lg md:text-xl leading-relaxed text-[#6B5D52]">
-              Discover our curated selection of premium organic groceries, sourced from the finest farms across India.
+              Discover our curated selection of premium groceries, sourced from the finest farms across India.
             </p>
           </motion.div>
         </div>
@@ -206,6 +259,9 @@ const products = [
                   </h3>
                   <p className="text-base leading-relaxed text-[#6B5D52]">
                     {product.description}
+                  </p>
+                  <p className="text-sm text-[#6B5D52]">
+                     Size: {product.size}
                   </p>
                 </div>
               </motion.div>

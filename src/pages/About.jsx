@@ -1,3 +1,4 @@
+import farmVideo from '../images/farm-video.mp4';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Sprout, Target, Users, Sparkles } from 'lucide-react';
@@ -24,7 +25,7 @@ const About = () => {
               Our Story
             </h1>
             <p className="text-lg md:text-xl leading-relaxed text-[#6B5D52]">
-              Born from a passion for healthy living and sustainable farming, GreenGold Grocers is committed to bringing you the purest organic products from India's finest farms.
+              Born from a passion for healthy living and sustainable farming, GreenGold Grocers is committed to bringing you the purest products from India's finest farms.
             </p>
           </motion.div>
         </div>
@@ -42,12 +43,14 @@ const About = () => {
               transition={{ duration: 0.6 }}
               whileHover={{ scale: 1.02 }}
             >
-              <img
-                src="https://images.unsplash.com/photo-1704989522658-81902cc56f54?auto=format&fit=crop&q=80&w=800"
-                alt="Golden hour wheat farm field in India"
-                className="w-full h-[500px] object-cover rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgb(20,83,45,0.15)] transition-all duration-500"
-                data-testid="about-farm-image"
-              />
+            <div className="w-full max-w-[350px] h-[500px] mx-auto rounded-3xl overflow-hidden shadow-lg">
+ <video
+  src={farmVideo}
+  controls
+  loop
+  className="w-full h-full object-cover rounded-3xl"
+/>
+</div>
             </motion.div>
 
             <motion.div
@@ -67,7 +70,7 @@ const About = () => {
                 Rooted in Tradition, Growing with Purpose
               </h2>
               <p className="text-base leading-relaxed text-[#6B5D52]">
-                GreenGold Grocers was founded with a simple belief: that every family deserves access to nutritious, chemical-free food. We partner directly with organic farmers across India who share our commitment to sustainable agriculture and ethical practices.
+                GreenGold Grocers was founded with a simple belief: that every family deserves access to nutritious, chemical-free food. We partner directly with farmers across India who share our commitment to sustainable agriculture and ethical practices.
               </p>
               <p className="text-base leading-relaxed text-[#6B5D52]">
                 From the golden wheat fields of Punjab to the spice gardens of Kerala, we carefully source every product to ensure it meets our rigorous standards for quality and purity. Our mission is to reconnect urban families with the authentic tastes and nutritional benefits of traditional Indian agriculture.
@@ -106,7 +109,7 @@ const About = () => {
                 Our Mission
               </h3>
               <p className="text-base leading-relaxed text-[#6B5D52]">
-                To make premium organic groceries accessible to every household, promoting healthier lifestyles while supporting sustainable farming practices that respect our environment and farming communities.
+                To make premium groceries accessible to every household, promoting healthier lifestyles while supporting sustainable farming practices that respect our environment and farming communities.
               </p>
             </motion.div>
 
@@ -132,7 +135,7 @@ const About = () => {
                 Our Vision
               </h3>
               <p className="text-base leading-relaxed text-[#6B5D52]">
-                To become India's most trusted organic grocery brand, creating a thriving ecosystem where consumers, farmers, and the environment all flourish together in harmony.
+                To become India's most trusted grocery brand, creating a thriving ecosystem where consumers, farmers, and the environment all flourish together in harmony.
               </p>
             </motion.div>
           </div>

@@ -10,6 +10,22 @@
   box-sizing: border-box;
 }
 
+@keyframes uspScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-usp-scroll {
+  animation: uspScroll 22s linear infinite;
+  white-space: nowrap;
+}
+
+
+
 body {
   font-family: 'Manrope', sans-serif;
   -webkit-font-smoothing: antialiased;
