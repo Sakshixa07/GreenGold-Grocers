@@ -20,11 +20,11 @@ const Home = () => {
     
     <div className="flex gap-16 py-3 text-sm md:text-base font-medium animate-usp-scroll hover:[animation-play-state:paused]">
 
-      <span className="flex items-center gap-2">🌾 Stone Ground Atta</span>
-      <span className="flex items-center gap-2">🚜 MP Wheat Sourcing</span>
-      <span className="flex items-center gap-2">🏭 Hygienic Plant</span>
-      <span className="flex items-center gap-2">💧 RO Washed Grains</span>
-      <span className="flex items-center gap-2">⚙ Automatic Packing</span>
+      <span className="flex items-center gap-2"> Stone Ground Atta</span>
+      <span className="flex items-center gap-2"> MP Wheat Sourcing</span>
+      <span className="flex items-center gap-2"> Hygienic Plant</span>
+      <span className="flex items-center gap-2"> RO Washed Grains</span>
+      <span className="flex items-center gap-2"> Automatic Packing</span>
 
       {/* duplicate for seamless loop */}
 
